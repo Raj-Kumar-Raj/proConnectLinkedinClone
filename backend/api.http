@@ -1,0 +1,93 @@
+POST http://localhost:9000/register HTTP/1.1
+Content-Type: application/json
+
+{
+      "name": " User 2",
+      "email": "user@example.com",
+       "password": "userpassword",
+    "username": "user"
+  
+}
+
+
+###
+
+POST http://localhost:9000/register HTTP/1.1
+Content-Type: application/json
+
+{
+      "name": " User3",
+      "email": "user3@example.com",
+       "password": "userpassword3",
+    "username": "user3"
+  
+}
+
+
+
+###
+
+
+POST http://localhost:9000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "user3@example.com",
+    "password": "userpassword3"
+}
+
+###
+
+POST http://localhost:9000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "user@example.com",
+    "password": "userpassword"
+}
+
+
+
+
+### 
+
+
+GET http://localhost:9000/get_user_and_profile HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "ddc81d84e0ca752958b3efdfd0bd255de1dd5abcda2dcf63e16660cf00c6a811"
+}
+
+
+###
+// create a  post for update_profile_data
+POST http://localhost:9000/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "026f9cca026581af7a857b647303bf9b0d263fcceaad5b4f6e01d64800884cb4",
+    "bio": "I am a software engineer",
+    "currentPost": "I am a software engineer",
+    "pastWork": [
+        {
+            "company": "Google",
+            "position": "Software Engineer",
+            "years": 2 
+        }
+    ],
+    "education": [
+        {
+            "school": "MIT",
+            "degree": "Masters",
+            "fieldOfStudy": "Computer Science",
+            "years": "2015-2017"
+        }
+    ]
+}
+
+
+###
+
+GET http://localhost:9000/user/get_all_users HTTP/1.1
+Content-Type: application/json
